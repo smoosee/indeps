@@ -4,7 +4,7 @@ const { resolve } = require('path');
 const { getConfig, logger, updateJsonFile, getLocalPath } = require('../util');
 
 
-const { locals } = getConfig();
+const { dependencies: { locals } } = getConfig();
 Object.keys(locals || {}).forEach(name => {
 
     const cwd = process.cwd();

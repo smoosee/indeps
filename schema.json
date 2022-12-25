@@ -3,12 +3,6 @@
     "definitions": {},
     "$schema": "http://json-schema.org/draft-07/schema#",
     "properties": {
-        "registry": {
-            "$id": "/properties/registry",
-            "type": "string",
-            "title": "NPM Registry url to install internal dependencies from and publish libraries to.",
-            "default": "https://registry.npmjs.org"
-        },
         "library": {
             "$id": "/properties/library",
             "type": "object",
@@ -31,6 +25,25 @@
                     "examples": [
                         "1.0.4"
                     ]
+                }
+            }
+        },
+        "dependencies": {
+            "type": "object",
+            "properties": {
+                "registry": {
+                    "$id": "/properties/registry",
+                    "type": "string",
+                    "title": "NPM Registry url to install internal dependencies from and publish libraries to.",
+                    "default": "https://registry.npmjs.org"
+                },
+                "locals": {
+                    "type": "object",
+                    "title": "A map of local dependencies, where the key is the name of the installed package, and the value is the local path of that package."
+                },
+                "internals": {
+                    "type": "object",
+                    "title": "A map of local dependencies, where the key is the name of the installed package, and the value is name of the package in the internal registry."
                 }
             }
         },

@@ -62,7 +62,7 @@ exports.updateJsonFile = (parentPath, fileName, data) => {
 }
 
 exports.getLatestVersion = () => {
-    const { registry, library } = this.getConfig();
+    const { dependencies: { registry }, library } = this.getConfig();
     const pkg = require(resolve(process.cwd(), 'package.json'));
     const name = library?.name || pkg?.name;
     const version = library?.version || pkg?.version;
@@ -110,4 +110,27 @@ exports.getNextVersion = (type = 'patch') => {
     this.logger('info', 'Latest retrieved version is', latestVersion, 'Next version is', nextVersion);
 
     return nextVersion;
+}
+
+exports.getLocalPath = (key) => {
+    const { dependencies: { locals } } = this.getConfig();
+    let returnValue;
+    const value = locals[key];
+    if (value instanceof Array) {
+        value.forEach(x => {
+            returnValue = this.getValidParentDirectory(x);
+        });
+    } else {
+        returnValue = this.getValidParentDirectory(value);
+    }
+    return returnValue;
+}
+
+
+exports.getValidParentDirectory = (dirPath) => {
+    if (existsSync(dirPath)) {
+        return dirPath;
+    } else {
+        return this.getValidParentDirectory(join(dirPath, '..'));
+    }
 }
