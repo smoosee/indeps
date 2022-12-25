@@ -1,1 +1,3 @@
-require('../commands/locals');
+module.exports = (data) => {
+    require('../commands/locals')(data);
+}

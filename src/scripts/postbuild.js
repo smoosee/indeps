@@ -1,1 +1,3 @@
-require('../commands/cleanupBuild');
+module.exports = (data) => {
+    require('../commands/cleanupBuild')(data);
+}

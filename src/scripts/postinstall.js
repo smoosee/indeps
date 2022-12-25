@@ -1,1 +1,3 @@
-require('../commands/internals');
+module.exports = (data) => {
+    require('../commands/internals')(data);
+}

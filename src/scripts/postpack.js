@@ -1,1 +1,3 @@
-require('../commands/restoreDist');
+module.exports = (data) => {
+    require('../commands/restoreDist')(data);
+}
