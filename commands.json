@@ -28,5 +28,10 @@
         "name": "prepack",
         "description": "ensure npm pack commands ran in root actually packs dist directory.",
         "path": "./src/scripts/prepack.js"
+    },
+    {
+        "name": "postpack",
+        "description": "undo changes done by prepack command.",
+        "path": "./src/scripts/postpack.js"
     }
 ]
