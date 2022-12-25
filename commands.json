@@ -1,0 +1,32 @@
+[
+    {
+        "name": "locals",
+        "description": "link dependencies from local filesystem into current application node_modules.",
+        "path": "./src/commands/locals.js"
+    },
+    {
+        "name": "internals",
+        "description": "install internal dependencies from a behind-proxy repository.",
+        "path": "./src/commands/internals.js"
+    },
+    {
+        "name": "buildVersion",
+        "description": "update buildVersion for application (usually before build).",
+        "path": "./src/commands/buildVersion.js"
+    },
+    {
+        "name": "pkgVersion",
+        "description": "update version in package.json for npm libraries.",
+        "path": "./src/commands/pkgVersion.js"
+    },
+    {
+        "name": "cleanupBuild",
+        "description": "cleanup dist directory for npm libraries based on patterns provided.",
+        "path": "./src/commands/cleanupBuild.js"
+    },
+    {
+        "name": "prepack",
+        "description": "ensure npm pack commands ran in root actually packs dist directory.",
+        "path": "./src/scripts/prepack.js"
+    }
+]
