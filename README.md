@@ -1,4 +1,4 @@
-# indeps
+# @sheriffMoose/indeps
 Various tools for handling internal dependencies.
 
 ## Installation
