@@ -25,9 +25,25 @@
         "path": "./src/commands/cleanupBuild.js"
     },
     {
-        "name":"prestart",
-        "description":"runt"
-    }
+        "name": "postinstall",
+        "description": "executes the internals command.",
+        "path": "./src/scripts/postinstall.js"
+    },
+    {
+        "name": "prestart",
+        "description": "executes the locals command.",
+        "path": "./src/scripts/prestart.js"
+    },
+    {
+        "name": "prebuild",
+        "description": "executes the pkgVersion & buildVersion commands.",
+        "path": "./src/scripts/prebuild.js"
+    },
+    {
+        "name": "postbuild",
+        "description": "executes the cleanupBuild command.",
+        "path": "./src/scripts/postbuild.js"
+    },
     {
         "name": "prepack",
         "description": "ensure npm pack commands ran in root actually packs dist directory.",
