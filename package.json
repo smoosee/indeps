@@ -30,6 +30,7 @@
     "commander": "^9.4.1",
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
+    "json-schema-defaults": "^0.4.0",
     "lodash": "^4.17.21"
   }
 }

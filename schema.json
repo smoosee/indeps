@@ -1,0 +1,110 @@
+{
+    "type": "object",
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "properties": {
+        "registry": {
+            "$id": "/properties/registry",
+            "type": "string",
+            "title": "NPM Registry url to install internal dependencies from and publish libraries to.",
+            "default": "https://registry.npmjs.org"
+        },
+        "library": {
+            "$id": "/properties/library",
+            "type": "object",
+            "title": "An optional object to include if the consuming repo is a library. Otherwise, they will be retrieved from package.json.",
+            "properties": {
+                "name": {
+                    "$id": "/properties/library/name",
+                    "type": "string",
+                    "title": "Name of the node library.",
+                    "default": "",
+                    "examples": [
+                        "@sheriffMoose/indeps"
+                    ]
+                },
+                "version": {
+                    "$id": "/properties/library/version",
+                    "type": "string",
+                    "title": "Version of the node library, this is also used to retrieve the latest version.",
+                    "default": "",
+                    "examples": [
+                        "1.0.4"
+                    ]
+                }
+            }
+        },
+        "build": {
+            "type": "object",
+            "properties": {
+                "srcPath": {
+                    "type": "string",
+                    "title": "Source path to be used for mapping src files, specifically package.json for libraries.",
+                    "default": "src"
+                },
+                "distPath": {
+                    "type": "string",
+                    "title": "Distination path to be used for mapping dist files.",
+                    "default": "dist"
+                },
+                "version": {
+                    "type": "object",
+                    "title": "Version configuration for build version & package version processing.",
+                    "properties": {
+                        "prefix": {
+                            "type": "string",
+                            "title": "Prefix to be prepended to the build version generated.",
+                            "default": ""
+                        },
+                        "map": {
+                            "type": "string",
+                            "title": "Mapping to be used when retrieving version from package.json",
+                            "default": "minor"
+                        },
+                        "increment": {
+                            "type": "string",
+                            "title": "Auto increment version part.",
+                            "default": "patch"
+                        },
+                        "filePath": {
+                            "type": "string",
+                            "title": "File path that includes the $BUILD_VERSION flag to be replaced with the generated version.",
+                            "default": "src/environments/environment.prod.ts"
+                        }
+                    }
+                },
+                "files": {
+                    "type": "array",
+                    "title": "List of file name patterns that will be used to ignore when cleaning up the dist directory."
+                }
+            }
+        },
+        "publish": {
+            "type": "object",
+            "properties": {
+                "distPath": {
+                    "type": "string",
+                    "title": "Distination path to be used for mapping dist files.",
+                    "default": "dist"
+                },
+                "keepFiles": {
+                    "type": "array",
+                    "title": "List of file/folder names that will be ignored when moving/restoring the dist directory.",
+                    "default": [
+                        ".tgz",
+                        "dist",
+                        ".env",
+                        "node_modules",
+                        ".git",
+                        ".gitignore",
+                        "patches",
+                        ".indepsrc.json",
+                        ".indepsrc",
+                        ".indeps.json",
+                        "indeps.json"
+                    ]
+                }
+            }
+        }
+    }
+}

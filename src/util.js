@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 const { existsSync } = require('fs');
 const { resolve } = require('path');
 const { mergeWith, cloneDeep, isArray } = require('lodash');
-const defaults = require('./defaults');
+const defaults = require('json-schema-defaults')(require('./schema.json'));
 
 exports.mergeDeep = (oldObj, newObj) => {
     return mergeWith(cloneDeep(oldObj), newObj, (objValue, srcValue) => {

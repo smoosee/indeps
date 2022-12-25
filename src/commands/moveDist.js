@@ -3,10 +3,10 @@ const { resolve } = require('path');
 const { logger, getConfig } = require('../util');
 
 const cwd = process.cwd();
-const { publish: { distPath, keepArray } } = getConfig();
+const { publish: { distPath, keepFiles } } = getConfig();
 
 if (!existsSync(resolve(cwd, distPath, 'package.json'))) {
-    keepArray.push('package.json');
+    keepFiles.push('package.json');
     logger('info', 'Keeping package.json from root directory');
 }
 
@@ -17,7 +17,7 @@ if (!existsSync(tempPath)) {
 
 logger('info', 'Moving all files', 'from root folder', `to ${tempPath} folder`);
 readdirSync(cwd).forEach(file => {
-    const regex = new RegExp(`${keepArray.join('|')}`, 'dgi');
+    const regex = new RegExp(`${keepFiles.join('|')}`, 'dgi');
     const condition = !regex.test(file);
     if (condition) {
         cpSync(resolve(cwd, file), resolve(tempPath, file), { recursive: true, force: true });
