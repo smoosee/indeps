@@ -4,16 +4,15 @@ const { logger, getConfig } = require('../util');
 
 module.exports = (data) => {
     const cwd = process.cwd();
-    const { publish: { distPath, keepFiles } } = getConfig();
+    const { publish: { distPath, tempPath, keepFiles } } = getConfig();
 
     if (!existsSync(resolve(cwd, distPath, 'package.json'))) {
         keepFiles.push('package.json');
         logger('info', 'Keeping package.json from root directory');
     }
 
-    const tempPath = resolve(cwd, '../.tmp');
-    if (!existsSync(tempPath)) {
-        mkdirSync(tempPath);
+    if (!existsSync(resolve(cwd, tempPath))) {
+        mkdirSync(resolve(cwd, tempPath));
     }
 
     logger('info', 'Moving all files', 'from root folder', `to ${tempPath} folder`);
@@ -21,7 +20,7 @@ module.exports = (data) => {
         const regex = new RegExp(`${keepFiles.join('|')}`, 'dgi');
         const condition = !regex.test(file);
         if (condition) {
-            cpSync(resolve(cwd, file), resolve(tempPath, file), { recursive: true, force: true });
+            cpSync(resolve(cwd, file), resolve(cwd, tempPath, file), { recursive: true, force: true });
             rmSync(resolve(cwd, file), { recursive: true, force: true })
         }
     });

@@ -4,17 +4,13 @@ const { logger, getConfig } = require('../util');
 
 module.exports = (data) => {
     const cwd = process.cwd();
-    const { publish: { distPath, keepFiles } } = getConfig();
+    const { publish: { distPath, tempPath, keepFiles } } = getConfig();
 
     if (!existsSync(resolve(cwd, distPath, 'package.json'))) {
         keepFiles.push('package.json');
         logger('info', 'Keeping package.json from root directory');
     }
 
-    const tempPath = resolve(cwd, '../.tmp');
-    if (!existsSync(tempPath)) {
-        mkdirSync(tempPath);
-    }
 
     logger('info', 'Removing old dist files', `from root folder`);
     readdirSync(cwd).forEach(file => {

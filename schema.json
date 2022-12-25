@@ -76,7 +76,7 @@
                         },
                         "increment": {
                             "type": "string",
-                            "title": "Auto increment version part.",
+                            "title": "Part of the version that will be auto incremented.",
                             "default": "patch"
                         },
                         "filePath": {
@@ -99,6 +99,11 @@
                     "type": "string",
                     "title": "Distination path to be used for mapping dist files.",
                     "default": "dist"
+                },
+                "tempPath": {
+                    "type": "string",
+                    "title": "Path of the temp directory where the root directory contents will be moved.",
+                    "default": "../.temp"
                 },
                 "keepFiles": {
                     "type": "array",
