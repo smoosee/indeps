@@ -1,6 +1,16 @@
 const { execSync } = require('child_process');
 const { existsSync } = require('fs');
 const { resolve } = require('path');
+const { mergeWith, cloneDeep, isArray } = require('lodash');
+const defaults = require('./defaults');
+
+exports.mergeDeep = (oldObj, newObj) => {
+    return mergeWith(cloneDeep(oldObj), newObj, (objValue, srcValue) => {
+        if (isArray(objValue)) {
+            return [].concat(...objValue, ...srcValue);
+        }
+    });
+}
 
 exports.getConfig = () => {
     const cwd = process.cwd();
@@ -20,7 +30,7 @@ exports.getConfig = () => {
     if (configPath) {
         config = require(resolve(cwd, configPath));
     }
-    return config;
+    return this.mergeDeep(defaults, config);
 };
 
 exports.logger = (type, title, ...data) => {
@@ -100,27 +110,4 @@ exports.getNextVersion = (type = 'patch') => {
     this.logger('info', 'Latest retrieved version is', latestVersion, 'Next version is', nextVersion);
 
     return nextVersion;
-}
-
-export const getLocalPath = (key) => {
-    const { locals } = getConfig();
-    let returnValue;
-    const value = locals[key];
-    if (value instanceof Array) {
-        value.forEach(x => {
-            returnValue = this.getValidParentDirectory(x);
-        });
-    } else {
-        returnValue = this.getValidParentDirectory(value);
-    }
-    return returnValue;
-}
-
-
-export const getValidParentDirectory = (dirPath) => {
-    if (existsSync(dirPath)) {
-        return dirPath;
-    } else {
-        return this.getValidParentDirectory(join(dirPath, '..'));
-    }
 }

@@ -25,6 +25,10 @@
         "path": "./src/commands/cleanupBuild.js"
     },
     {
+        "name":"prestart",
+        "description":"runt"
+    }
+    {
         "name": "prepack",
         "description": "ensure npm pack commands ran in root actually packs dist directory.",
         "path": "./src/scripts/prepack.js"

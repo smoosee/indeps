@@ -1,6 +1,6 @@
 {
   "name": "@sheriffmoose/indeps",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Various tools for handling internal dependencies.",
   "main": "index.js",
   "bin": {
@@ -29,6 +29,7 @@
   "dependencies": {
     "commander": "^9.4.1",
     "dayjs": "^1.11.7",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "lodash": "^4.17.21"
   }
 }
