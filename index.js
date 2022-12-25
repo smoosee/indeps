@@ -4,9 +4,11 @@ const dotenv = require('dotenv');
 const commander = require('commander');
 const pkg = require('./package.json');
 const commands = require('./commands.json');
+const util = require('./src/util');
 
 dotenv.config();
 
+const config = util.getConfig();
 const program = new commander.Command();
 
 
@@ -16,13 +18,14 @@ program
     .version(pkg.version);
 
 
-commands.forEach(command => {
+commands.forEach(({ name, description, path }) => {
     program
-        .command(command.name)
-        .description(command.description)
+        .command(name)
+        .description(description)
         .allowUnknownOption()
         .action((data, options) => {
-
+            const command = require(path || `./src/${name}.js`);
+            command(data);
         });
 });
 
