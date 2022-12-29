@@ -1,10 +1,50 @@
-# indeps
-Various tools for handling internal dependencies.
+<div style="text-align:center;" align="center">
+    <h1>Internal Dependencies</h1>
+    <p>Configurable tools for managing internal dependencies.</p>
+    <p>
+        <a href="https://github.com/sheriffMoose/indeps/actions/workflows/release.yml">
+            <img src="https://img.shields.io/github/actions/workflow/status/sheriffMoose/indeps/release.yml?logo=github&label=release"/>
+        </a>
+        <a href="https://github.com/sheriffMoose/indeps/blob/main/LICENSE">
+            <img src="https://img.shields.io/github/license/sheriffMoose/indeps?logo=github"/>
+        </a>
+        <a href="https://npmjs.org/package/@sheriffmoose/indeps">
+            <img src="https://img.shields.io/npm/v/@sheriffmoose/indeps?logo=npm&logoColor=white&labelColor=CB3837&color=grey&label="/>
+        </a>
+    </p>
+    <p>
+        <a href="https://npmjs.org/package/@sheriffmoose/indeps">
+            <img src="https://nodei.co/npm/@sheriffmoose/indeps.png"/>
+        </a>
+    </p>
+</div>
+
+<h2>Table of Contents</h2>
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Commands](#commands)
+  - [buildVersion](#buildversion)
+  - [cleanupBuild](#cleanupbuild)
+  - [internals](#internals)
+  - [locals](#locals)
+  - [moveDist](#movedist)
+  - [pkgVersion](#pkgversion)
+  - [restoreDist](#restoredist)
+- [Scripts](#scripts)
+  - [postinstall](#postinstall)
+  - [prestart](#prestart)
+  - [prebuild](#prebuild)
+  - [postbuild](#postbuild)
+  - [prepack](#prepack)
+  - [postpack](#postpack)
+
 
 ## Installation
 Simply run
 ```
-npm install @sheriffmoose/indeps -D
+npm install @sheriffMoose/indeps -D
 ```
 
 ## Usage
