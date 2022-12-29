@@ -1,10 +1,10 @@
-# @sheriffMoose/indeps
+# indeps
 Various tools for handling internal dependencies.
 
 ## Installation
 Simply run
 ```
-npm install @sheriffMoose/indeps -D
+npm install @sheriffmoose/indeps -D
 ```
 
 ## Usage
