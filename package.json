@@ -32,5 +32,8 @@
     "dotenv": "^16.0.3",
     "json-schema-defaults": "^0.4.0",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "auto": "^10.3.0"
   }
 }
