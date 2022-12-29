@@ -1,3 +1,15 @@
+# v1.0.12 (Thu Dec 29 2022)
+
+#### ⚠️ Pushed to `main`
+
+- update readme.md ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.11 (Thu Dec 29 2022)
 
 #### ⚠️ Pushed to `main`
