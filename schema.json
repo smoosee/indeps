@@ -82,7 +82,8 @@
                         "filePath": {
                             "type": "string",
                             "title": "File path that includes the $BUILD_VERSION flag to be replaced with the generated version.",
-                            "default": "src/environments/environment.prod.ts"
+                            "default":"",
+                            "examples": ["src/environments/environment.prod.ts"]
                         }
                     }
                 },
