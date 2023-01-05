@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 const { existsSync } = require('fs');
-const { resolve } = require('path');
+const { join, resolve } = require('path');
 const { mergeWith, cloneDeep, isArray } = require('lodash');
 const defaults = require('json-schema-defaults')(require('../schema.json'));
 
