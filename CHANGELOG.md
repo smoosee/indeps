@@ -1,3 +1,15 @@
+# v1.0.13 (Thu Jan 05 2023)
+
+#### ⚠️ Pushed to `main`
+
+- set default value for filePath to empty ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.12 (Thu Dec 29 2022)
 
 #### ⚠️ Pushed to `main`
