@@ -1,3 +1,15 @@
+# v1.0.16 (Thu Jan 05 2023)
+
+#### ⚠️ Pushed to `main`
+
+- add main.js for exports ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.15 (Thu Jan 05 2023)
 
 #### ⚠️ Pushed to `main`
