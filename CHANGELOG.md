@@ -1,3 +1,15 @@
+# v1.0.14 (Thu Jan 05 2023)
+
+#### ⚠️ Pushed to `main`
+
+- update schema.json to set default value for increment field ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.13 (Thu Jan 05 2023)
 
 #### ⚠️ Pushed to `main`
