@@ -1,3 +1,15 @@
+# v1.0.18 (Thu Jan 05 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix join undefined error ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.17 (Thu Jan 05 2023)
 
 #### ⚠️ Pushed to `main`
