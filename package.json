@@ -1,6 +1,6 @@
 {
   "name": "@sheriffmoose/indeps",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Various tools for handling internal dependencies.",
   "main": "main.js",
   "bin": {
