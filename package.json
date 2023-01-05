@@ -2,7 +2,7 @@
   "name": "@sheriffmoose/indeps",
   "version": "1.0.15",
   "description": "Various tools for handling internal dependencies.",
-  "main": "index.js",
+  "main": "main.js",
   "bin": {
     "indeps": "index.js"
   },
