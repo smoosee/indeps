@@ -77,13 +77,20 @@
                         "increment": {
                             "type": "string",
                             "title": "Part of the version that will be auto incremented.",
-                            "default": "patch"
+                            "default": "",
+                            "examples": [
+                                "patch",
+                                "minor",
+                                "major"
+                            ]
                         },
                         "filePath": {
                             "type": "string",
                             "title": "File path that includes the $BUILD_VERSION flag to be replaced with the generated version.",
-                            "default":"",
-                            "examples": ["src/environments/environment.prod.ts"]
+                            "default": "",
+                            "examples": [
+                                "src/environments/environment.prod.ts"
+                            ]
                         }
                     }
                 },
