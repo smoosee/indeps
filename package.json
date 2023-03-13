@@ -2,6 +2,7 @@
   "name": "@smoosee/indeps",
   "version": "1.0.18",
   "description": "Various tools for handling internal dependencies.",
+  "private": false,
   "main": "main.js",
   "bin": {
     "indeps": "index.js"
@@ -26,6 +27,10 @@
     "url": "https://github.com/sheriffMoose/indeps/issues"
   },
   "homepage": "https://github.com/sheriffMoose/indeps#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "dependencies": {
     "commander": "^9.4.1",
     "dayjs": "^1.11.7",
