@@ -1,23 +1,32 @@
 <div style="text-align:center;" align="center">
-    <h1>Internal Dependencies</h1>
+    <h1>indeps</h1>
     <p>Configurable tools for managing internal dependencies.</p>
-    <p>
-        <a href="https://github.com/sheriffMoose/indeps/actions/workflows/release.yml">
-            <img src="https://img.shields.io/github/actions/workflow/status/sheriffMoose/indeps/release.yml?logo=github&label=release"/>
-        </a>
-        <a href="https://github.com/sheriffMoose/indeps/blob/main/LICENSE">
-            <img src="https://img.shields.io/github/license/sheriffMoose/indeps?logo=github"/>
-        </a>
-        <a href="https://npmjs.org/package/@sheriffmoose/indeps">
-            <img src="https://img.shields.io/npm/v/@sheriffmoose/indeps?logo=npm&logoColor=white&labelColor=CB3837&color=grey&label="/>
-        </a>
-    </p>
-    <p>
-        <a href="https://npmjs.org/package/@sheriffmoose/indeps">
-            <img src="https://nodei.co/npm/@sheriffmoose/indeps.png"/>
-        </a>
-    </p>
+    
+[![][img.release]][link.release]
+[![][img.license]][link.license]
+
+![][img.node]
+![][img.npm]
+![][img.downloads]
+
+[![][img.health]][link.snyk]
+
+[![][img.banner]][link.npm]
+
 </div>
+
+[img.release]: https://img.shields.io/github/actions/workflow/status/smoosee/indeps/release.yml?logo=github&label=release
+[img.license]: https://img.shields.io/github/license/smoosee/indeps?logo=github
+[img.node]: https://img.shields.io/node/v/@smoosee/indeps?logo=node.js&logoColor=white&labelColor=339933&color=grey&label=
+[img.npm]: https://img.shields.io/npm/v/@smoosee/indeps?logo=npm&logoColor=white&labelColor=CB3837&color=grey&label=
+[img.downloads]: https://img.shields.io/npm/dt/@smoosee/indeps?logo=docusign&logoColor=white&labelColor=purple&color=grey&label=
+[img.health]: https://snyk.io/advisor/npm-package/@smoosee/indeps/badge.svg
+[img.banner]: https://nodei.co/npm/@smoosee/indeps.png
+[link.release]: https://github.com/smoosee/smoosee/actions/workflows/release.yml
+[link.license]: https://github.com/smoosee/smoosee/blob/master/LICENSE
+[link.npm]: https://npmjs.org/package/@smoosee/indeps
+[link.snyk]: https://snyk.io/advisor/npm-package/@smoosee/indeps
+
 
 <h2>Table of Contents</h2>
 
@@ -44,7 +53,7 @@
 ## Installation
 Simply run
 ```
-npm install @sheriffMoose/indeps -D
+npm install @smoosee/indeps -D
 ```
 
 ## Usage
@@ -66,7 +75,7 @@ Or add the commands to your package.json scripts as in
 - You can create `.indepsrc.json` config file manually.
 - Make sure your `.indepsrc.json` is using the latest json schema by including the following key
 ```
-    "$schema": "node_modules/@sheriffmoose/indeps/schema.json"
+    "$schema": "node_modules/@smoosee/indeps/schema.json"
 ```
 - Or simply run `npx indeps init` command.
 
@@ -115,11 +124,11 @@ URL of the internal registry that will be used to install the dependencies.
 
 A key-value map of dependencies that will be installed, the key represents the name of the package after installation. The value represents the actual name of the package in the internal registry.
 
-For Example: "@sheriffMoose/indeps": "internal-deps@1.0.34". This will install `internal-deps` with the version `1.0.34` and name it `@sheriffMoose/indeps` in the node_modules directory.
+For Example: "@smoosee/indeps": "internal-deps@1.0.34". This will install `internal-deps` with the version `1.0.34` and name it `@smoosee/indeps` in the node_modules directory.
 
 This is the equivalent to executing
 ```
-npm i --no-save @sheriffMoose/indeps@internal-deps@1.0.34 --registry=https://registry.npmjs.org
+npm i --no-save @smoosee/indeps@internal-deps@1.0.34 --registry=https://registry.npmjs.org
 ```
 
 ### locals

@@ -14,7 +14,7 @@
                     "title": "Name of the node library.",
                     "default": "",
                     "examples": [
-                        "@sheriffMoose/indeps"
+                        "@smoosee/indeps"
                     ]
                 },
                 "version": {

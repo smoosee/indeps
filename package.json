@@ -1,5 +1,5 @@
 {
-  "name": "@sheriffmoose/indeps",
+  "name": "@smoosee/indeps",
   "version": "1.0.18",
   "description": "Various tools for handling internal dependencies.",
   "main": "main.js",
