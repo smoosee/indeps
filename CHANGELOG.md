@@ -11,6 +11,19 @@
 
 ---
 
+# v1.0.19 (Mon Mar 13 2023)
+
+#### ⚠️ Pushed to `main`
+
+- update package.json ([@sheriffMoose](https://github.com/sheriffMoose))
+- rename @sheriffMoose to @smoosee ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.18 (Thu Jan 05 2023)
 
 #### ⚠️ Pushed to `main`
