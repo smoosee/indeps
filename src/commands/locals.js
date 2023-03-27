@@ -8,9 +8,9 @@ module.exports = (data) => {
     dependencies: { locals },
   } = getConfig();
   const cwd = process.cwd();
-  const keys = Object.keys(locals || {});
+  const keys = [];
 
-  keys.forEach((name) => {
+  Object.keys(locals || {}).forEach((name) => {
     const stats = lstatSync(resolve(cwd, "node_modules", name));
 
     if (stats.isSymbolicLink()) {
@@ -21,6 +21,7 @@ module.exports = (data) => {
         "already exists in node_modules"
       );
     } else {
+      keys.push(name);
       try {
         const result = execSync(`npm ls -g ${name}`);
         if (result) {
@@ -49,11 +50,13 @@ module.exports = (data) => {
     }
   });
 
-  logger(
-    "info",
-    `Linking ${keys}`,
-    `from global node_modules`,
-    `to local node_modules`
-  );
-  execSync(`npm link ${keys.join(" ")}`, { cwd, stdio: "inherit" });
+  if (keys.length) {
+    logger(
+      "info",
+      `Linking ${keys}`,
+      `from global node_modules`,
+      `to local node_modules`
+    );
+    execSync(`npm link ${keys.join(" ")}`, { cwd, stdio: "inherit" });
+  }
 };
