@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sheriffMoose/indeps.git"
+    "url": "git+https://github.com/smoosee/indeps.git"
   },
   "keywords": [
     "internal",
@@ -24,9 +24,9 @@
   "author": "Mostafa Sherif",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sheriffMoose/indeps/issues"
+    "url": "https://github.com/smoosee/indeps/issues"
   },
-  "homepage": "https://github.com/sheriffMoose/indeps#readme",
+  "homepage": "https://github.com/smoosee/indeps#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
