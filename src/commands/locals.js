@@ -6,11 +6,11 @@ const { getConfig, logger, updateJsonFile, getLocalPath } = require('../util');
 
 module.exports = (data) => {
     const { dependencies: { locals } } = getConfig();
+    const cwd = process.cwd();
     const keys = Object.keys(locals||{});
 
     keys.forEach(name => {
 
-        const cwd = process.cwd();
         const stats = lstatSync(resolve(cwd, 'node_modules', name));
 
         if (stats.isSymbolicLink()) {
