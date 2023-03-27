@@ -1,3 +1,18 @@
+# v1.0.19 (Mon Mar 27 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix cwd is undefined ([@sheriffMoose](https://github.com/sheriffMoose))
+- feat: allow linking multiple libraries at once ([@sheriffMoose](https://github.com/sheriffMoose))
+- update package.json ([@sheriffMoose](https://github.com/sheriffMoose))
+- rename @sheriffMoose to @smoosee ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.19 (Mon Mar 13 2023)
 
 #### ⚠️ Pushed to `main`
