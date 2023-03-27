@@ -1,3 +1,15 @@
+# v1.0.27 (Mon Mar 27 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix duplicate linking local deps ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.26 (Mon Mar 27 2023)
 
 #### ⚠️ Pushed to `main`
