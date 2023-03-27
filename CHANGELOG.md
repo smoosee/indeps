@@ -1,3 +1,15 @@
+# v1.0.25 (Mon Mar 27 2023)
+
+#### ⚠️ Pushed to `main`
+
+- update package.json links ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.19 (Mon Mar 27 2023)
 
 #### ⚠️ Pushed to `main`
