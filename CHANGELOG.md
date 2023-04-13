@@ -1,3 +1,15 @@
+# v1.0.29 (Thu Apr 13 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix logger.info call ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.28 (Thu Apr 13 2023)
 
 #### ⚠️ Pushed to `main`
