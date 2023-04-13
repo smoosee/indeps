@@ -67,11 +67,20 @@ exports.getLatestVersion = () => {
     const name = library?.name || pkg?.name;
     const version = library?.version || pkg?.version;
 
-    this.logger('info', 'Getting published versions', `of ${name}`, `with version ${version}`, `from registry ${registry}`);
-    const results = execSync(`npm --registry=${registry} view ${name}@~${version} version`, { encoding: 'utf8' }).replace(new RegExp(name, 'dgi'), '').split(/\n|@|,|'|\s|\]|\[/g).filter(Boolean);
-    const versions = this.sortVersions(new Set(results));
-    const latestVersion = versions.pop() || version;
-    return latestVersion;
+    try {
+        this.logger('info', 'Getting published versions', `of ${name}`, `with version ${version}`, `from registry ${registry}`);
+        const results = execSync(`npm --registry=${registry} view ${name}@~${version} version`, { encoding: 'utf8' }).replace(new RegExp(name, 'dgi'), '').split(/\n|@|,|'|\s|\]|\[/g).filter(Boolean);
+        const versions = this.sortVersions(new Set(results));
+        const latestVersion = versions.pop() || version;
+        return latestVersion;
+    } catch (e) {
+        this.logger('error', 'Could not retrieve published version from npm registry');
+        if (library?.version) {
+            this.logger.info('info', 'Using the version provided in config file.');
+        } else {
+            this.logger('info', 'Please indicate correct version in config file.');
+        }
+    }
 }
 
 exports.sortVersions = versions => {
