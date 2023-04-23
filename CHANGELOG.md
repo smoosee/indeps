@@ -1,3 +1,17 @@
+# v1.0.30 (Sun Apr 23 2023)
+
+#### ⚠️ Pushed to `main`
+
+- update release.yml to fix git user issue ([@sheriffMoose](https://github.com/sheriffMoose))
+- update moveDist & restoreDist to match exact file names ([@sheriffMoose](https://github.com/sheriffMoose))
+- return version from config file ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.29 (Thu Apr 13 2023)
 
 #### ⚠️ Pushed to `main`
