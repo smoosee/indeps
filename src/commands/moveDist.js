@@ -17,7 +17,7 @@ module.exports = (data) => {
 
     logger('info', 'Moving all files', 'from root folder', `to ${tempPath} folder`);
     readdirSync(cwd).forEach(file => {
-        const regex = new RegExp(`${keepFiles.join('|')}`, 'dgi');
+        const regex = new RegExp(`^(${keepFiles.join('|')})$`, 'dgi');
         const condition = !regex.test(file);
         if (condition) {
             cpSync(resolve(cwd, file), resolve(cwd, tempPath, file), { recursive: true, force: true });

@@ -6,15 +6,9 @@ module.exports = (data) => {
     const cwd = process.cwd();
     const { publish: { distPath, tempPath, keepFiles } } = getConfig();
 
-    if (!existsSync(resolve(cwd, distPath, 'package.json'))) {
-        keepFiles.push('package.json');
-        logger('info', 'Keeping package.json from root directory');
-    }
-
-
     logger('info', 'Removing old dist files', `from root folder`);
     readdirSync(cwd).forEach(file => {
-        const regex = new RegExp(`${keepFiles.join('|')}`, 'g');
+        const regex = new RegExp(`^(${keepFiles.join('|')})$`, 'g');
         const condition = !regex.test(file);
         if (condition) {
             cpSync(resolve(cwd, file), resolve(distPath, file), { recursive: true, force: true });

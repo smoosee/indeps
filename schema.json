@@ -127,7 +127,9 @@
                         ".indepsrc.json",
                         ".indepsrc",
                         ".indeps.json",
-                        "indeps.json"
+                        "indeps.json",
+                        "README.md",
+                        "LICENSE"
                     ]
                 }
             }
