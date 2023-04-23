@@ -29,4 +29,4 @@ commands.forEach(({ name, description, path }) => {
         });
 });
 
-program.parse();
+program.parse(process.argv);
