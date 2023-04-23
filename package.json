@@ -1,6 +1,6 @@
 {
   "name": "@smoosee/indeps",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "description": "Various tools for handling internal dependencies.",
   "private": false,
   "main": "main.js",
