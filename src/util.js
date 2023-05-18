@@ -75,9 +75,9 @@ exports.getLatestVersion = () => {
         return latestVersion;
     } catch (e) {
         this.logger('error', 'Could not retrieve published version from npm registry');
-        if (library?.version) {
+        if (version) {
             this.logger('info', 'Using the version provided in config file.');
-            return library.version;
+            return version.replace(/x/, '0');
         } else {
             this.logger('info', 'Please indicate correct version in config file.');
         }
