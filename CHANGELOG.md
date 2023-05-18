@@ -1,3 +1,15 @@
+# v1.0.32 (Thu May 18 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix getting latest version ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.31 (Sun Apr 23 2023)
 
 #### ⚠️ Pushed to `main`
