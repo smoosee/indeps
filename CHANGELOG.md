@@ -1,3 +1,15 @@
+# v1.0.37 (Fri Jun 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- destructure code into methods ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.36 (Fri Jun 02 2023)
 
 #### ⚠️ Pushed to `main`
