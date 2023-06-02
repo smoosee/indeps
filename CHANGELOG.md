@@ -1,3 +1,15 @@
+# v1.0.33 (Fri Jun 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- add triggerBuild command ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.32 (Thu May 18 2023)
 
 #### ⚠️ Pushed to `main`
