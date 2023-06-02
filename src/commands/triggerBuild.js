@@ -6,9 +6,9 @@ const { getConfig } = require('../util');
 const { library } = getConfig();
 
 async function getCurrentVersion() {
-    const versionFileContent = fs.readFileSync(library.versionFile, "utf8");
+    const versionFileContent = fs.readFileSync(library.versionFile, `utf8`);
     let result;
-    if (library.versionFile.endsWith("pom.xml")) {
+    if (library.versionFile.endsWith(`pom.xml`)) {
         result = await xml2js.parseStringPromise(versionFileContent);
     } else if (library.versionFile) {
         result = JSON.parse(versionFileContent);
@@ -24,7 +24,7 @@ function createBuildFile(version) {
     }
 
     // Read version and build number from build.json file
-    const buildFileContent = fs.readFileSync(library.buildFile, "utf8");
+    const buildFileContent = fs.readFileSync(library.buildFile, `utf8`);
     const buildData = JSON.parse(buildFileContent);
 
     // Pump version and build number
@@ -51,9 +51,11 @@ function commitBuildFile(version, date, build) {
     // Create git tag for commit
     execSync(`git tag v${version}-date${date}-build${build}`);
 
+
     // Push commit and tag to remote repo
-    execSync("git push");
-    execSync("git push --tags");
+    const currentBranch = execSync(`git rev-parse --abbrev-ref HEAD`).toString().trim();
+    execSync(`git push -u origin ${currentBranch}`);
+    execSync(`git push --tags`);
 }
 
 module.exports = (data) => {
