@@ -34,10 +34,10 @@ const build = date === buildData.date ? buildData.build + 1 : 1;
 
 // Write new version, build number, and date to build.json file
 const newData = { ...buildData, version, build, date, time };
-fs.writeFileSync(buildFilePath, JSON.stringify(newData, null, 2));
+fs.writeFileSync(library.buildFile, JSON.stringify(newData, null, 2));
 
 // Create git commit for build.json file
-execSync(`git add ${buildFilePath}`);
+execSync(`git add ${library.buildFile}`);
 execSync(`git commit -m "Bump version to ${newVersion} (build ${newBuild})"`);
 
 // Create git tag for commit
