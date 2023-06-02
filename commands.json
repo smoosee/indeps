@@ -1,5 +1,10 @@
 [
     {
+        "name": "triggerBuild",
+        "description": "create a json file to contain current version details and push it to git repository to trigger builds",
+        "path":"./src/commands/triggerBuild.js"
+    },
+    {
         "name": "locals",
         "description": "link dependencies from local filesystem into current application node_modules.",
         "path": "./src/commands/locals.js"
