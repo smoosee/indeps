@@ -1,3 +1,15 @@
+# v1.0.39 (Fri Jun 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- update git push to use upstream ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.38 (Fri Jun 02 2023)
 
 #### ⚠️ Pushed to `main`
