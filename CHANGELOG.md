@@ -1,3 +1,15 @@
+# v1.0.34 (Fri Jun 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- update schema & add xml2js ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.33 (Fri Jun 02 2023)
 
 #### ⚠️ Pushed to `main`
