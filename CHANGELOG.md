@@ -1,3 +1,15 @@
+# v1.0.40 (Fri Jun 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- add open pull request url behaviour ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.39 (Fri Jun 02 2023)
 
 #### ⚠️ Pushed to `main`
