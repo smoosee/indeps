@@ -3,7 +3,7 @@ const xml2js = require('xml2js');
 const { execSync } = require('child_process');
 const { getConfig } = require('../util');
 
-const { library} = getConfig();
+const { library } = getConfig();
 
 async function getCurrentVersion() {
     const versionFileContent = fs.readFileSync(library.versionFile, 'utf8');
@@ -18,8 +18,8 @@ async function getCurrentVersion() {
 
 const version = getCurrentVersion();
 
-if (!fs.existsSync(buildFile)) {
-    fs.writeFileSync(buildFile, JSON.stringify({ version, build: 0 }));
+if (!fs.existsSync(library.buildFile)) {
+    fs.writeFileSync(library.buildFile, JSON.stringify({ version, build: 0 }));
 }
 
 // Read version and build number from build.json file
