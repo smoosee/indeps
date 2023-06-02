@@ -37,6 +37,7 @@
     "dotenv": "^16.0.3",
     "json-schema-defaults": "^0.4.0",
     "lodash": "^4.17.21",
+    "opn": "^6.0.0",
     "xml2js": "^0.6.0"
   },
   "devDependencies": {

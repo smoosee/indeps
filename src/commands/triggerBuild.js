@@ -56,6 +56,10 @@ function commitBuildFile(version, date, build) {
     const currentBranch = execSync(`git rev-parse --abbrev-ref HEAD`).toString().trim();
     execSync(`git push -u origin ${currentBranch}`);
     execSync(`git push --tags`);
+
+    if (library.pullRequestURL) {
+        require('opn')(library.pullRequestURL.replace(':branch', currentBranch));
+    }
 }
 
 module.exports = (data) => {

@@ -37,6 +37,12 @@
                     "type": "string",
                     "title": "Path to retrieve the initial version from for the build details generation",
                     "default": "pom.xml"
+                },
+                "pullRequestURL": {
+                    "$id": "/properties/library/pullRequestURL",
+                    "type": "string",
+                    "title": "A url to open for creating a new pull request when the build details is updated. Use `:branch` as interpolation key.",
+                    "default": ""
                 }
             }
         },
