@@ -25,6 +25,18 @@
                     "examples": [
                         "1.0.4"
                     ]
+                },
+                "buildFile": {
+                    "$id": "/properties/library/buildFile",
+                    "type": "string",
+                    "title": "Path to store the json file to store the build details",
+                    "default": "build.json"
+                },
+                "versionFile": {
+                    "$id": "/properties/library/versionFile",
+                    "type": "string",
+                    "title": "Path to retrieve the initial version from for the build details generation",
+                    "default": "pom.xml"
                 }
             }
         },
