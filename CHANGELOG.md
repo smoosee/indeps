@@ -1,3 +1,15 @@
+# v1.0.35 (Fri Jun 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix remove variable ([@sheriffMoose](https://github.com/sheriffMoose))
+
+#### Authors: 1
+
+- Mostafa Sherif ([@sheriffMoose](https://github.com/sheriffMoose))
+
+---
+
 # v1.0.34 (Fri Jun 02 2023)
 
 #### ⚠️ Pushed to `main`
