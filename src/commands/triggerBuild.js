@@ -56,7 +56,9 @@ function commitBuildFile(version, date, build) {
     execSync("git push --tags");
 }
 
-getCurrentVersion().then((version) => {
-    const { date, build } = createBuildFile(version);
-    commitBuildFile(version, date, build);
-});
+module.exports = (data) => {
+    getCurrentVersion().then((version) => {
+        const { date, build } = createBuildFile(version);
+        commitBuildFile(version, date, build);
+    });
+}
